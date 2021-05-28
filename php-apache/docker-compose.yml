@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+    apache:
+        restart: 'unless-stopped'
+        image: albertosola/php-apache
+        ports:
+            - 5000:80
+        volumes:
+            - ./:/var/www/html
